@@ -14,13 +14,13 @@ obtener las veces que se repite cada palabra del array nacionalidades */
 
 function cuenta() {
 
-mex = nacionalidades.filter (element => element === "mexicano")
+let mex = nacionalidades.filter (element => element === "mexicano")
 mex = "Mexicanos: " + " " + mex.length
-arg = nacionalidades.filter (element => element === "argentino")
+let arg = nacionalidades.filter (element => element === "argentino")
 arg = "Argentinos: " + " " + arg.length
-per = nacionalidades.filter (element => element === "peruano")
+let per = nacionalidades.filter (element => element === "peruano")
 per = "Peruanos: " + " " + per.length
-chi = nacionalidades.filter (element => element === "chileno")
+let chi = nacionalidades.filter (element => element === "chileno")
 chi = "Chilenos: " + " " + chi.length
 
 /*  Finalmente le pedimos a la funcion que 
