@@ -12,6 +12,7 @@ con un string con la palabra que buscamos + un especio + el método .length para
 la cantidad de palabras encontradas por el método .filter en el nuevo array. Asi logramos
 obtener las veces que se repite cada palabra del array nacionalidades */
 
+/*
 function cuenta() {
 
 mex = nacionalidades.filter (element => element === "mexicano")
@@ -26,10 +27,46 @@ chi = "Chilenos: " + " " + chi.length
 /*  Finalmente le pedimos a la funcion que 
  en loguee en la consola las 4 variables para ver los resultados */
 
-console.log(mex, arg, per,chi)
+// console.log(mex, arg, per,chi) 
 
-}
+// } 
 
 // llamamos a la función creada para ver los resultados en la consola.
 
-cuenta()
+// cuenta()
+
+let nation = (["mexicano", "argentino", "argentino", "venezolano",
+"peruano", "mexicano", "argentino", "peruano", "venezolano"]);
+
+let mex = [];
+let argent = [];
+let ven = [];
+let per = [];
+
+function selectNation(nation){
+    
+    for(let i = 0; i<= nation.length; i++){ 
+        if(nation[i] == 'mexicano'){ 
+            mex.push(nation[i]);           
+        }else {
+            if(nation[i] == 'argentino'){
+                argent.push(nation[i]);  
+            }else{
+                if(nation[i] == 'venezolano'){
+                    ven.push(nation[i]); 
+                }else{
+                    if(nation[i] == 'peruano'){
+                        per.push(nation[i]); 
+                    }
+                }
+            }
+        }
+    }
+    console.log("Existen " + mex.length + " Mexicanos");
+    console.log("Existen " + argent.length + " Argentinos");
+    console.log("Existen " + ven.length + " Venezolanos");
+    console.log("Existen " + per.length + " Peruanos");
+    
+}
+
+selectNation(nation);
